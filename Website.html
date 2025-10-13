@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayantara Biswas - Health Economist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            background: white;
+            padding: 60px 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 280px;
+            height: 280px;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #999;
+            border: 2px solid #ddd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .header-content {
+            padding-top: 20px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            font-weight: normal;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            color: #2c3e50;
+        }
+
+        .subtitle {
+            font-size: 1.4em;
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 0.3px;
+        }
+
+        .tagline {
+            font-size: 1.1em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .contact {
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .contact a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-separator {
+            color: #ccc;
+            margin: 0 5px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: 4px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.3em;
+            font-weight: normal;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+            letter-spacing: 0.3px;
+            color: #2c3e50;
+        }
+
+        h3 {
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 6px;
+            color: #2c3e50;
+        }
+
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .entry {
+            margin-bottom: 25px;
+            line-height: 1.8;
+            padding-left: 0;
+        }
+
+        .entry-title {
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: #2c3e50;
+        }
+
+        .entry-meta {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+
+        .entry-detail {
+            margin-left: 20px;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .research-areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .research-areas span {
+            background-color: #f0f0f0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            border: 1px solid #e0e0e0;
+            color: #555;
+        }
+
+        .subsection-title {
+            font-style: italic;
+            font-size: 0.98em;
+            color: #666;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        footer {
+            background: white;
+            margin-top: 60px;
+            padding: 30px;
+            text-align: center;
+            color: #999;
+            font-size: 0.85em;
+            border-top: 1px solid #e0e0e0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .profile-photo {
+                margin: 0 auto;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1.2em;
+            }
+
+            .hero-section {
+                padding: 40px 20px;
+            }
+
+            .container {
+                padding: 25px;
+                margin: 20px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-container">
+            <div class="profile-photo">
+                <!-- Image placeholder - replace src with actual photo -->
+                <div style="text-align: center; color: #999;">
+                    [Photo to be inserted here]<br><br>
+                    <span style="font-size: 12px;">Replace this with your profile photo</span>
+                </div>
+            </div>
+            <div class="header-content">
+                <h1>Nayantara Biswas, Ph.D.</h1>
+                <div class="subtitle">Health Economist and Postdoctoral Researcher</div>
+                <div class="tagline">
+                    Beth Israel Deaconess Medical Center, Harvard Medical School
+                </div>
+                <div class="contact">
+                    <a href="mailto:nbiswas1@bidmc.harvard.edu">nbiswas1@bidmc.harvard.edu</a>
+                    <span class="contact-separator">|</span>
+                    <a href="https://connects.catalyst.harvard.edu/Profiles/display/Person/222865" target="_blank">Harvard Catalyst Profile</a>
+                    <span class="contact-separator">|</span>
+                    <a href="https://www.linkedin.com/in/nayantara-biswas/" target="_blank">LinkedIn</a>
+                    <span class="contact-separator">|</span>
+                    <a href="https://twitter.com/nayantara_" target="_blank">@nayantara_</a>
+                </div>
+                <div class="contact">
+                    330 Brookline Rd, Boston, MA 02215
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2>Summary</h2>
+            <p>
+                Welcome! I am an applied microeconomist specializing in econometric impact evaluations of social policies and health interventions, with a particular focus on historically minoritized communities. Specifically, I investigate how local and global programs interact with different cultural contexts to shape household choices and resource allocation. In my research, I employ quasi-experimental methods using large-scale household surveys and administrative data to empirically and causally validate existing theoretical models in the behavioral sciences. In my current role, I am undergoing postdoctoral training in experimental design, implementation science, mixed-methods analysis, biostatistics, and epidemiology.
+            </p>
+        </section>
+
+        <section>
+            <h2>Research Interests</h2>
+            <div class="research-areas">
+                <span>Health Economics</span>
+                <span>Applied Econometrics</span>
+                <span>Development Economics</span>
+                <span>Gender Economics</span>
+                <span>Public Policy</span>
+                <span>Causal Inference</span>
+                <span>Health Services Research</span>
+                <span>Global Health</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="entry-title">Ph.D. in Economics</div>
+                <div class="entry-meta">Clark University, Worcester, MA (2024)</div>
+                <div class="entry-detail">Dissertation:<a href="https://www.proquest.com/openview/4ec99242c2b93fb4ff2ec655bf358c9a/1?pq-origsite=gscholar&cbl=18750&diss=y" target="_blank"> The Impact of Social Policies on Reproductive Health, Maternal Employment, and Child Health in India</a></div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">M.A. in Economics</div>
+                <div class="entry-meta">Clark University, Worcester, MA (2020)</div>
+                <div class="entry-detail">Specialization: Spatial and Applied Econometrics</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">M.S. in Economics</div>
+                <div class="entry-meta">University of Calcutta, Kolkata, India (2017)</div>
+                <div class="entry-detail">Thesis: Impact of Vocational Education and Training on Employment and Wages in Indian Labor Market: Variation across Social Groups</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">B.S. in Economics</div>
+                <div class="entry-meta">Loreto College, Kolkata, India (2015)</div>
+                <div class="entry-detail">Thesis: The Missing Women of India: A Cross-sectional Analysis of the Factors Affecting Sex Ratio with a Trend Analysis</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Academic Positions</h2>
+            <div class="entry">
+                <div class="entry-title"><a href="https://research.bidmc.org/rose-molina/people/nayantara-biswas" target="_blank">Postdoctoral Research Fellow in Obstetrics and Gynecology</a></div>
+                <div class="entry-meta">Harvard Medical School, Boston, MA (January 2025–Present)</div>
+                <div class="entry-detail">Conducting Health Services Research to Determine the Optimal Quality of Care for Healthcare Users and Providers</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Postdoctoral Research Associate in Health Economics</div>
+                <div class="entry-meta">University of Notre Dame, IN (July–December 2024)</div>
+                <div class="entry-detail">Analyzing the Impact of Nutrition Interventions on Maternal Health using Quantitative and Qualitative Methods</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Publications</h2>
+            <ul>
+                <li>Quiros, S., & <strong>Biswas, N.</strong> (2025). Citizenship status and race/ethnicity: Inequities in access to paid family and medical leave and workplace flexibility. <em>Journal of Racial and Ethnic Health Disparities</em>. Advance online publication. <a href="https://link.springer.com/article/10.1007/s40615-025-02321-z" target="_blank">https://doi.org/10.1007/s40615-025-02321-z</a></li>
+                <li>Stanton, E., Woods, B., Stasio, T., Burt, J., Garraway, D., <strong>Biswas, N.</strong>, & Shute, A. (2024). <em>Illinois adult use cannabis industry disparity study</em>. Nerevu Group, LLC. <a href="https://static1.squarespace.com/static/5936d98f6a4963bcd1ed94d3/t/66d0e714420ac8012427467e/1724966679103/Illinois-Adult-Use-Cannabis-Industry-Disparity-Study-Report-2024-07-12.pdf" target="_blank">[Report prepared for the Illinois Cannabis Regulation Oversight Office]</a></li>
+                <li><strong>Biswas, N.</strong>, & Borges, M. (2023). Discrimination in loan denials: Evidence from the housing market in Massachusetts. <em><a href="https://aeclinic.org/aec-blog/2023/10/3/discrimination-in-loan-denials-evidence-from-the-housing-market-in-massachusetts3" target="_blank">Applied Economics Clinic Blog Series</a></em>.</li>
+                <li><strong>Biswas, N.</strong> (2023). Disproportionate impacts of abortion access. <em><a href="https://aeclinic.org/aec-blog/2023/09/27/-disproportionate-impacts-of-abortion-access" target="_blank">Applied Economics Clinic Blog Series</a></em>.</li>
+                <li>O'Donoghue, A., <strong>Biswas, N.</strong>, Dechen, T., Anderson, T., Talmor, N., Punnamaraju, A., & Stevens, J. (2021). Trends in filled naloxone prescriptions before and during the COVID-19 pandemic in the United States. <em>JAMA Health Forum, 2</em>(5), e210393. <a href="https://jamanetwork.com/journals/jama-health-forum/fullarticle/2779948" target="_blank">https://doi.org/10.1001/jamahealthforum.2021.0393</a></li>
+                <li><strong>Biswas, N.</strong> (2017). Inclusive growth: A myth or reality? <em>Veritas, 2016-17</em>, 41–45. [Academic Essay for Gokhale Institute of Politics and Economics, Pune, India]</li>
+                <li><strong>Biswas, N.</strong>, Mukherjee, B., Dhamangamwala, J., & Basu, T. (2013). Health insurance: An asset or a liability. Impact of reforms on Indian insurance sector. In M. Naskar (Ed.), <em>Impact of reforms on Indian insurance sector</em> (pp. 221–229). Manav Prakashan Publisher. [ISBN: 978-93-80332-45-1]</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Teaching Experience</h2>
+            <div class="entry">
+                <div class="entry-title">Instructor of Record</div>
+                <div class="entry-meta">Department of Economics, Clark University</div>
+                <ul style="margin-top: 8px; margin-bottom: 0;">
+                    <li>Introduction to Statistical Analysis (Spring 2022 & Spring 2024)</li>
+                    <li>Economics and the World Economy (Fall 2022–Spring 2023)</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Teaching Assistant</div>
+                <div class="entry-meta">Department of Economics, Clark University</div>
+                <ul style="margin-top: 8px; margin-bottom: 0;">
+                    <li>Introduction to Statistical Analysis (Fall 2021)</li>
+                    <li>Economics and the World Economy (Spring 2019–Spring 2021)</li>
+                    <li>Urban Economics (Fall 2018)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Works in Progress</h2>
+            <div class="subsection-title">Under Review</div>
+            <ul>
+                <li><strong>Biswas, N.</strong>, & Adkins, S. <em>Do public daycares affect maternal employment? Evidence from India.</em></li>
+                <li><strong>Biswas, N.</strong>, Warner, G., Naumowicz, M., Diaz, A., Hannibal, K., Kasper, J., Katz, J., & Molina, R. <em>A qualified multilingual assessment program pilot for medical students.</em></li>
+                <li>Warner, G., <strong>Biswas, N.</strong>, Naumowicz, M., Diaz, A., Hannibal, K., Kasper, J., Katz, J., & Molina, R. <em>Language proficiency improvements after longitudinal vs. intensive medical Spanish courses.</em></li>
+                <li>Reyes, D., <strong>Biswas, N.</strong>, Hacker, M., Kaimal, A., Gold-Gomez, S., Guise, J.-M., & Molina, R. <em>Interpreter insights for building clinician-patient trust during pregnancy care: A qualitative study.</em></li>
+            </ul>
+
+            <div class="subsection-title">Manuscripts in Preparation for Submission</div>
+            <ul>
+                <li><strong>Biswas, N.</strong> <em>Can community health workers affect reproductive health outcomes? Evidence from India.</em></li>
+                <li><strong>Biswas, N.</strong> <em>Hospitals or nurses: Which matters more for child health investments? Evidence from India.</em></li>
+                <li>Eliakimu, E., <strong>Biswas, N.</strong>, Clarke-Deelder, E., Mbatia, R., Zuakulu, M., Bukuku, A., Moshi, S., Cohen, J., & Larson, E. <em>Basic accountability to stop ill-treatment (BASI): Results from a cluster randomized controlled trial in rural Tanzania.</em></li>
+                <li>Musabeyezu, J., Myrick, J., <strong>Biswas, N.</strong>, Gebel, C., Royce, C., Farolfi, G., & Larson, E. <em>Patient preferences when choosing a birth doula: Results from a discrete choice experiment.</em></li>
+            </ul>
+
+            <div class="subsection-title">Manuscripts in Progress</div>
+            <ul>
+                <li><strong>Biswas, N.</strong>, & Hazra, D. <em>Do female community health workers affect gender-based violence? Evidence from India.</em></li>
+                <li><strong>Biswas, N.</strong>, & Tsaneva, M. <em>Temperature shocks and child marriage in India.</em></li>
+                <li><strong>Biswas, N.</strong>, & Quiros, S. <em>The effect of paid family leave on the health of immigrant parents and their children in the United States.</em></li>
+                <li><strong>Biswas, N.</strong>, Gold-Gomez, S., Pelkey, K., Pearlman, L., Molina, R., & Fernández, L. <em>Perceived accuracy and acceptability of a qualified multilingual assessment program for physicians.</em></li>
+                <li><strong>Biswas, N.</strong>, Larson, E., Fernández, L., & Molina, R. <em>When to request a professional medical interpreter: A discrete choice experiment.</em></li>
+                <li><strong>Biswas, N.</strong>, & Larson, E. <em>Association between patient experience and mental health in older adults: Evidence from the Longitudinal Aging Study in India.</em></li>
+                <li>Lugala, S., Sharma, V., Ngbadurezere, W., Scott, J., <strong>Biswas, N.</strong>, Patrick, E., Hanania, D., & Larson, E. <em>Adapting the gender-based violence pocket guide for low-literacy contexts: Implementation lessons from South Sudan.</em></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Research Experience</h2>
+            <div class="entry">
+                <div class="entry-title">Research Fellow</div>
+                <div class="entry-meta"><a href="https://aeclinic.org" target="_blank">Applied Economics Clinic</a> (June 2023–January 2024)</div>
+                <div class="entry-detail">Conducted econometrics and statistical analyses to assess disparities within labor and energy markets in the United States.</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Research Assistant for <a href="https://www.clarku.edu/faculty/profiles/magda-tsaneva/" target="_blank">Dr. Magda Tsaneva</a></div>
+                <div class="entry-meta">Department of Economics, Clark University (June 2020–August 2023)</div>
+                <div class="entry-detail">Estimated impact of public policies on child health and labor outcomes in India.</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Summer Research Assistant for <a href="https://sites.google.com/site/suprabhabaniya/" target="_blank">Dr. Suprabha Baniya</a></div>
+                <div class="entry-meta">Department of Economics, Clark University (June–August 2022)</div>
+                <div class="entry-detail">Modelled household consumption function of environmental goods for Asian Development Bank.</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Summer Research Assistant for <a href="https://www.clarku.edu/faculty/profiles/wayne-gray/" target="_blank">Dr. Wayne Gray</a></div>
+                <div class="entry-meta">Department of Economics, Clark University (June–August 2019)</div>
+                <div class="entry-detail">Data entry and synopsis on manufacturing sector of paper and pulp industries in the United States.</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Predoctoral Research Assistant for <a href="https://presiuniv.ac.in/web/staff.php?staffid=414" target="_blank">Dr. Zakir Husain</a></div>
+                <div class="entry-meta">Department of Economics, IIT Kharagpur (August 2017–July 2018)</div>
+                <div class="entry-detail">Analyzed data for a study on <a href="https://link.springer.com/book/10.1007/978-981-15-0583-6" target="_blank">"Active Ageing and Labour Market Engagement: Evidence from Eastern India".</a></div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Research Assistant for <a href="https://www.linkedin.com/in/samata-biswas-714820248/?originalSubdomain=in" target="_blank">Dr. Samata Biswas</a></div>
+                <div class="entry-meta">Department of Sociology, University of Calcutta (August–September 2017)</div>
+                <div class="entry-detail">Conducted ethnographic study for <a href="http://www.mcrg.ac.in/6thCSC/6thCSC_Full_Papers/Samata.pdf" target="_blank">"The (Un)Sanitary City: Infrastructure and the Body in Kolkata".</a></div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Survey Team Member</div>
+                <div class="entry-meta"><a href="https://swayam.info/" target="_blank">Swayam, Kolkata, India</a> (August–September 2016)</div>
+                <div class="entry-detail">Collected data on "The Status of Widows in West Bengal" for National Commission for Women, India.</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Summer Research Intern</div>
+                <div class="entry-meta"><a href="https://branch.axisbank.com/axis-bank-kolkata-bank-branch-kolkata-west-bengal-37178/Home" target="_blank">Axis Bank, India</a> (August–September 2015)</div>
+                <div class="entry-detail">Prepared a report on "District Wise Trade and Business Opportunities in West Bengal".</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Awards and Honors</h2>
+            <div class="entry">
+                <div class="entry-title">Frédéric Bastiat Fellowship</div>
+                <div class="entry-meta">Mercatus Center, George Mason University (2023–2024)</div>
+                <div class="entry-detail">$5,000 awarded for Health Policy and Public Health research</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">ASHEcon Diversity Scholarship</div>
+                <div class="entry-meta">American Society of Health Economists (2023 and 2024)</div>
+                <div class="entry-detail">Approximately $1,660 awarded for travel expenses to attend annual conferences in Missouri (2023) and California (2024)</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">SICSS Research Fund Award</div>
+                <div class="entry-meta">University of California, Berkeley (2022 and 2023)</div>
+                <div class="entry-detail">$3,000 (2022) and $625 (2023) for public health research</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Veendorp Best Field Paper Award</div>
+                <div class="entry-meta">Clark University Department of Economics (2021)</div>
+                <div class="entry-detail">$500 for paper: "Can Community Health Workers Affect Maternal and Child Health Outcomes? Evidence from Conditional Cash Transfers in India"</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Graduate Full Tuition Scholarship</div>
+                <div class="entry-meta">Clark University Department of Economics (2018–2024)</div>
+                <div class="entry-detail">Full tuition remission with Teaching Assistant position</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Service</h2>
+            <h3>Journal Reviewer (2021–Present)</h3>
+            <p>
+                Feminist Economics, Population Research and Policy Review, PLOS ONE, Development Policy Review, Scientific Reports, Poverty and Public Policy, Healthcare, European Journal of Epidemiology (Ad hoc), New England Journal of Medicine (Ad hoc)
+            </p>
+            <h3>Conference Discussant (2021–Present)</h3>
+            <p>
+                Western Economic Association International (2024), Eastern Economic Association (2023–2024), Southern Economic Association (2020–2024), Canadian Economic Association (2022), American Society of Health Economists (2021)
+            </p>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <h3>Technical</h3>
+            <p>
+                <strong>Software:</strong> Stata, R, Python, ArcGIS, GeoDa, Sawtooth, Microsoft Office, LaTeX, REDCap, Dedoose, Epic Systems, CSPro
+            </p>
+            <h3>Languages</h3>
+            <p>
+                <strong>Fluent:</strong> English | <strong>Native:</strong> Bengali, Hindi | <strong>Basic:</strong> Spanish
+            </p>
+            <h3>Competencies</h3>
+            <p>
+                Analytical Thinking, Communication, Organization, Creative Problem-Solving, Adaptability, Qualitative Research Methods, Quantitative Analysis, Program Evaluation
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Last updated: October 2025</p>
+    </footer>
+</body>
+</html>
